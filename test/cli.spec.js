@@ -1,17 +1,17 @@
 'use strict';
 
-const spawn = require("child_process").spawn,
-    expect = require("chai").expect,
+const spawn = require('child_process').spawn,
+    expect = require('chai').expect,
     version = require('./../package.json').version,
     EXEC_PATH = require('path').resolve(`${__dirname}/../lib/cli`),
     TEST_HELP_SMALL = 'Usage: cli [options]',
-    TEST_HELP_RES = '\n  Usage: cli [options]\n\n\n  Options:\n\n        --version    output the version number\n    -n  --node       check node version\n        --npm        check npm version\n    -y  --yarn       check yarn version\n    -g  --git        check git version\n    -k  --karma      check karma version\n    -m  --mocha      check mocha version\n    -g  --gulp       check gulp version\n        --grunt      check grunt version\n    -e  --eslint     check eslint version\n    -t  --tslint     check tslint version\n    -p  --print-cli  check print-cli version\n    -h, --help       output usage information\n\n  Examples:\n\n    $ cli --node ">=4.2.1"\n    $ cli --help\n\n';
+    TEST_HELP_RES = '\n  Usage: cli [options]\n\n\n  Options:\n\n        --version           output the version number\n        --all               lists all installed versions\n    -n  --node [version]    check node version\n    -m  --npm [version]     check npm version\n    -y  --yarn [version]    check yarn version\n    -g  --git [version]     check git version\n    -k  --karma [version]   check karma version\n    -g  --gulp [version]    check gulp version\n        --grunt [version]   check grunt version\n    -e  --eslint [version]  check eslint version\n    -t  --tslint [version]  check tslint version\n        --nvm [version]     check nvm version\n        --n-mac [version]   check n version\n    -h, --help              output usage information\n\n  Examples:\n\n    $ cli --node ">=4.2.1"\n    $ cli --help\n\n';
 
 describe('lib/cli --- ', () => {
 
     describe('default options as executable --- ', () => {
 
-        it('test print help "--help"', (done) => {
+        it('should test help "--help" option', (done) => {
             runPrintCommand(['--help'], (err, stdout) => {
                 expect(err).to.be.eql(null);
                 expect(stdout).not.to.be.empty;
@@ -22,7 +22,7 @@ describe('lib/cli --- ', () => {
             });
         });
 
-        it('test print help "-help"', (done) => {
+        it('should test help "-h" option', (done) => {
             runPrintCommand(['-h'], (err, stdout) => {
                 expect(err).to.be.eql(null);
                 expect(stdout).not.to.be.empty;
@@ -33,7 +33,7 @@ describe('lib/cli --- ', () => {
             });
         });
 
-        it('test print help missing option', (done) => {
+        it('should test missing option', (done) => {
             runPrintCommand(['-a'], (err, stdout) => {
                 expect(err).to.be.eql(null);
                 expect(stdout).not.to.be.empty;
@@ -44,7 +44,7 @@ describe('lib/cli --- ', () => {
             });
         });
 
-        it('test print help invalid option', (done) => {
+        it('should test invalid option', (done) => {
             runPrintCommand(['--abc'], (err, stdout) => {
                 expect(err).to.be.eql(null);
                 expect(stdout).not.to.be.empty;
@@ -55,7 +55,7 @@ describe('lib/cli --- ', () => {
             });
         });
 
-        it('test print version "--version"', (done) => {
+        it('should test version "--version" option', (done) => {
             runPrintCommand(['--version'], (err, stdout) => {
                 expect(err).to.be.eql(null);
                 expect(stdout).not.to.be.empty;
@@ -67,14 +67,34 @@ describe('lib/cli --- ', () => {
         });
     });
 
-    describe('check version executable --- ', () => {
+    describe('options as executable --- ', () => {
 
-        it('test print "TEST DATA"', (done) => {
-            runPrintCommand(['--node'], (err, stdout) => {
+        it('should test "--node" option', (done) => {
+            runPrintCommand(['--node', '">=0.10.0"'], (err, stdout) => {
                 expect(err).to.be.eql(null);
                 expect(stdout).not.to.be.empty;
                 expect(stdout).not.to.be.undefined;
-                expect(stdout).to.contain(TEST_HELP_RES);
+                expect(stdout).to.contain('    node: ');
+                done();
+            });
+        });
+
+        it('should test "--npm" option', (done) => {
+            runPrintCommand(['--npm', '">=1.0.0"'], (err, stdout) => {
+                expect(err).to.be.eql(null);
+                expect(stdout).not.to.be.empty;
+                expect(stdout).not.to.be.undefined;
+                expect(stdout).to.contain('    npm: ');
+                done();
+            });
+        });
+
+        it('should test "--npm" option', (done) => {
+            runPrintCommand(['--karma', '"1.6.0"'], (err, stdout) => {
+                expect(err).to.be.eql(null);
+                expect(stdout).not.to.be.empty;
+                expect(stdout).not.to.be.undefined;
+                expect(stdout).to.contain('    karma: 1.6.0');
                 done();
             });
         });
@@ -113,8 +133,6 @@ function runRawCommand(args, callback) {
 
     child.on('close', onclose);
     child.on('error', callback);
-
-    // child.kill('SIGINT');
 
     function onclose(code) {
         callback(null, stdout, code, stderr);
