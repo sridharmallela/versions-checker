@@ -1,6 +1,6 @@
 {
   "name": "versions-checker",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "check installed versions of node, npm, yarn, and git",
   "main": "bin/version-checker.js",
   "repository": {
