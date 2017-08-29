@@ -89,12 +89,12 @@ describe('lib/cli --- ', () => {
             });
         });
 
-        it('should test "--npm" option', (done) => {
+        it('should test "--karma" option', (done) => {
             runPrintCommand(['--karma', '"1.6.0"'], (err, stdout) => {
                 expect(err).to.be.eql(null);
                 expect(stdout).not.to.be.empty;
                 expect(stdout).not.to.be.undefined;
-                expect(stdout).to.contain('    karma: 1.6.0');
+                expect(stdout).to.contain('    karma: ');
                 done();
             });
         });
