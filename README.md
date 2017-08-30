@@ -5,7 +5,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/sridharmallela/versions-checker.svg?style=plastic)](https://github.com/sridharmallela/versions-checker/issues)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)](https://raw.githubusercontent.com/sridharmallela/versions-checker/master/LICENSE) 
 
-![introduction](assets/intro.gif)
+![introduction](https://github.com/sridharmallela/versions-checker/blob/master/assets/intro.gif?raw=true)
 
 Check installed versions of node, npm, yarn, and git 
 
