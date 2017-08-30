@@ -1,7 +1,9 @@
 <a id="markdown-versions-checker" name="versions-checker"></a>
 # Versions Checker 
 
-Versions Checker [![Build Status](https://travis-ci.org/sridharmallela/versions-checker.svg?branch=master)](https://travis-ci.org/sridharmallela/versions-checker)
+[![Build Status](https://travis-ci.org/sridharmallela/versions-checker.svg?branch=master)](https://travis-ci.org/sridharmallela/versions-checker) 
+[![GitHub issues](https://img.shields.io/github/issues/sridharmallela/versions-checker.svg?style=plastic)](https://github.com/sridharmallela/versions-checker/issues)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)](https://raw.githubusercontent.com/sridharmallela/versions-checker/master/LICENSE) 
 
 Check installed versions of node, npm, yarn, and git 
 
