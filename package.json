@@ -67,12 +67,12 @@
     "all": true
   },
   "scripts": {
-    "print-banner": "print-cli -b -font standard -c green \"versions-checker\"",
+    "print-banner": "./node_modules/.bin/print-cli -b -font standard -c green \"versions-checker\"",
     "commitmsg": "./node_modules/.bin/validate-commit-msg",
     "clean": "./node_modules/.bin/rimraf coverage .nyc_output",
     "lint": "./node_modules/.bin/eslint .",
-    "uglify-src": "./node_modules/.bin/uglifyjs ./lib/index.js -c -m --warn -o ./bin/index.js",
-    "uglify-cli": "./node_modules/.bin/uglifyjs ./lib/cli.js -c -m --warn -o ./bin/versions-checker",
+    "uglify-src": "./node_modules/.bin/uglifyjs ./lib/index.js -c -m -o ./bin/index.js",
+    "uglify-cli": "./node_modules/.bin/uglifyjs ./lib/cli.js -c -m -o ./bin/versions-checker",
     "uglify": "npm run uglify-src && npm run uglify-cli",
     "test-unit": "./node_modules/.bin/nyc mocha test",
     "build": "npm run lint && npm run uglify",
