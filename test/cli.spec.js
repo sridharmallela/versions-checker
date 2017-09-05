@@ -5,7 +5,7 @@ const spawn = require('child_process').spawn,
     version = require('./../package.json').version,
     EXEC_PATH = require('path').resolve(`${__dirname}/../lib/cli`),
     TEST_HELP_SMALL = 'Usage: cli [options]',
-    TEST_HELP_RES = '\n  Usage: cli [options]\n\n\n  Options:\n\n        --version           output the version number\n        --all               lists all installed versions\n    -n  --node [version]    check node version\n    -m  --npm [version]     check npm version\n    -y  --yarn [version]    check yarn version\n    -g  --git [version]     check git version\n    -k  --karma [version]   check karma version\n        --gulp [version]    check gulp version\n        --grunt [version]   check grunt version\n    -e  --eslint [version]  check eslint version\n    -t  --tslint [version]  check tslint version\n        --nvm [version]     check nvm version\n        --n-mac [version]   check n version\n    -h, --help              output usage information\n\n  Examples:\n\n    $ cli --node ">=4.2.1"\n    $ cli --help\n\n';
+    TEST_HELP_RES = '\n  Usage: cli [options]\n\n\n  Options:\n\n        --version           output the version number\n        --all               lists all installed versions\n    -s  --silent            will not exit even versions didn\'t match\n    -n  --node [version]    check node version\n    -m  --npm [version]     check npm version\n    -y  --yarn [version]    check yarn version\n    -g  --git [version]     check git version\n    -k  --karma [version]   check karma version\n        --gulp [version]    check gulp version\n        --grunt [version]   check grunt version\n    -e  --eslint [version]  check eslint version\n    -t  --tslint [version]  check tslint version\n        --nvm [version]     check nvm version\n        --n-mac [version]   check n version\n    -h, --help              output usage information\n\n  Examples:\n\n    $ cli --node ">=4.2.1"\n    $ cli --help\n\n';
 
 describe('lib/cli --- ', () => {
 
@@ -62,39 +62,6 @@ describe('lib/cli --- ', () => {
                 expect(stdout).not.to.be.undefined;
                 expect(stdout).to.contain(version);
                 expect(stdout).to.eql(version + '\n');
-                done();
-            });
-        });
-    });
-
-    describe('options as executable --- ', () => {
-
-        it('should test "--node" option', (done) => {
-            runPrintCommand(['--node', '">=0.10.0"'], (err, stdout) => {
-                expect(err).to.be.eql(null);
-                expect(stdout).not.to.be.empty;
-                expect(stdout).not.to.be.undefined;
-                expect(stdout).to.contain('    node: ');
-                done();
-            });
-        });
-
-        it('should test "--npm" option', (done) => {
-            runPrintCommand(['--npm', '">=1.0.0"'], (err, stdout) => {
-                expect(err).to.be.eql(null);
-                expect(stdout).not.to.be.empty;
-                expect(stdout).not.to.be.undefined;
-                expect(stdout).to.contain('    npm: ');
-                done();
-            });
-        });
-
-        it('should test "--karma" option', (done) => {
-            runPrintCommand(['--karma', '"1.6.0"'], (err, stdout) => {
-                expect(err).to.be.eql(null);
-                expect(stdout).not.to.be.empty;
-                expect(stdout).not.to.be.undefined;
-                expect(stdout).to.contain('    karma: ');
                 done();
             });
         });

@@ -28,6 +28,8 @@ Check installed versions of node, npm, yarn, and git
         - [Options](#options)
             - [help (-h|--help)](#help--h--help)
             - [version (--version)](#version---version)
+            - [all (--all)](#all---all)
+            - [silent (-s|--silent)](#silent--s--silent)
             - [node (-n|--node)](#node--n--node)
             - [npm (-m|--npm)](#npm--m--npm)
             - [yarn (-y|--yarn)](#yarn--y--yarn)
@@ -75,12 +77,13 @@ $ versions-checker --help
 
         --version           output the version number
         --all               lists all installed versions
+    -s  --silent            will not exit even versions match
     -n  --node [version]    check node version
     -m  --npm [version]     check npm version
     -y  --yarn [version]    check yarn version
     -g  --git [version]     check git version
     -k  --karma [version]   check karma version
-    -g  --gulp [version]    check gulp version
+        --gulp [version]    check gulp version
         --grunt [version]   check grunt version
     -e  --eslint [version]  check eslint version
     -t  --tslint [version]  check tslint version
@@ -171,7 +174,17 @@ $ npm run check-versions
 <a id="markdown-version---version" name="version---version"></a>
 #### version (--version)
 
-* specifies which version of versions-checker
+* specifies which version of versions-checker.
+
+<a id="markdown-all---all" name="all---all"></a>
+#### all (--all)
+
+* specifies to print installed versions.
+
+<a id="markdown-silent--s--silent" name="silent--s--silent"></a>
+#### silent (-s|--silent)
+
+* specifies to not exit command line if versions dont match.
 
 <a id="markdown-node--n--node" name="node--n--node"></a>
 #### node (-n|--node)

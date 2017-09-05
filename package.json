@@ -1,6 +1,6 @@
 {
   "name": "versions-checker",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "check installed versions of node, npm, yarn, and git",
   "main": "bin/version-checker.js",
   "repository": {
@@ -77,8 +77,9 @@
     "precommit": "npm test",
     "preversion": "npm test",
     "prepublishOnly": "npm test",
-    "help": "npm run lint && npm run uglify && npm run clean && npm run test-unit && node ./bin/versions-checker --help",
-    "versions-all": "node ./bin/versions-checker --all"
+    "help": "npm run lint && npm run uglify && npm run clean && npm run test-unit && ./bin/versions-checker --help",
+    "check-all": "./bin/versions-checker --all",
+    "test-node-check": "./bin/versions-checker --node 7"
   },
   "devDependencies": {
     "chai": "^4.1.1",
