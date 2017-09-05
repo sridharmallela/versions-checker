@@ -19,3 +19,5 @@ install:
 script:
     - npm run help
     - npm run versions-all
+    - npm test
+    - npm run report-coverage

@@ -1,9 +1,30 @@
 <a id="markdown-versions-checker" name="versions-checker"></a>
 # Versions Checker 
 
-[![Build Status](https://travis-ci.org/sridharmallela/versions-checker.svg?branch=master)](https://travis-ci.org/sridharmallela/versions-checker) 
-[![GitHub issues](https://img.shields.io/github/issues/sridharmallela/versions-checker.svg?style=plastic)](https://github.com/sridharmallela/versions-checker/issues)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)](https://raw.githubusercontent.com/sridharmallela/versions-checker/master/LICENSE) 
+[![npm](https://img.shields.io/npm/v/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
+[![npm](https://img.shields.io/npm/dw/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
+[![npm](https://img.shields.io/npm/dm/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
+[![npm](https://img.shields.io/npm/dy/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
+[![npm](https://img.shields.io/npm/dt/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
+
+
+[![GitHub tag](https://img.shields.io/github/tag/sridharmallela/versions-checker.svg?style=plastic)](https://github.com/sridharmallela/versions-checker/tags)
+[![GitHub release](https://img.shields.io/github/release/sridharmallela/versions-checker.svg?style=plastic)](https://github.com/sridharmallela/versions-checker/releases)
+[![GitHub issues](https://img.shields.io/github/issues/sridharmallela/versions-checker.svg?style=plastic)](https://github.com/sridharmallela/versions-checker/issues) 
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/sridharmallela/versions-checker.svg?style=plastic)](https://github.com/sridharmallela/versions-checker/pulls)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)](https://raw.githubusercontent.com/sridharmallela/versions-checker/master/LICENSE)
+
+[![Build Status](https://img.shields.io/travis/sridharmallela/versions-checker.svg?style=plastic)](https://travis-ci.org/sridharmallela/versions-checker) 
+[![codecov](https://codecov.io/gh/sridharmallela/versions-checker/branch/master/graph/badge.svg)](https://codecov.io/gh/sridharmallela/versions-checker)
+
+[![node](https://img.shields.io/node/v/sridharmallela/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
+[![David](https://img.shields.io/david/sridharmallela/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
+[![David](https://img.shields.io/david/dev/sridharmallela/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
+[![David](https://img.shields.io/david/optional/sridharmallela/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
+
+[![GitHub forks](https://img.shields.io/github/forks/sridharmallela/versions-checker.svg?style=social&label=Fork)](https://github.com/sridharmallela/versions-checker/)
+[![GitHub stars](https://img.shields.io/github/stars/sridharmallela/versions-checker.svg?style=social&label=Star)](https://github.com/sridharmallela/versions-checker/)
+[![GitHub watchers](https://img.shields.io/github/watchers/sridharmallela/versions-checker.svg?style=social&label=Watch)](https://github.com/sridharmallela/versions-checker/)
 
 ![introduction](https://github.com/sridharmallela/versions-checker/blob/master/assets/intro.gif?raw=true)
 
