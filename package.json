@@ -1,6 +1,6 @@
 {
     "name": "versions-checker",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "check installed versions of node, npm, yarn, and git",
     "main": "bin/index.js",
     "author": "Sridhar Mallela",
