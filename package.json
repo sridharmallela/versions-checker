@@ -1,6 +1,6 @@
 {
     "name": "versions-checker",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "description": "check installed versions of node, npm, yarn, and git",
     "main": "bin/index.js",
     "author": "Sridhar Mallela",
@@ -76,7 +76,7 @@
         "uglify-cli": "./node_modules/.bin/uglifyjs ./lib/cli.js -c -m -o ./bin/versions-checker",
         "uglify": "npm run uglify-src && npm run uglify-cli",
         "build": "npm run lint && npm run uglify",
-        "test-unit": "./node_modules/.bin/nyc ./node_modules/.bin/mocha ./lib/*.spec.js",
+        "test-unit": "./node_modules/.bin/nyc ./node_modules/.bin/mocha --timeout 5000 ./lib/*.spec.js",
         "test": "npm run lint && npm run uglify && npm run clean && npm run test-unit && npm run print-banner",
         "report-coverage": "./node_modules/.bin/nyc report --reporter=lcov > coverage.lcov",
         "code-coverage": "./node_modules/.bin/codecov",
@@ -96,7 +96,7 @@
         "mocha": "^3.5.0",
         "nyc": "^11.1.0",
         "path": "^0.12.7",
-        "print-cli": "^1.5.1",
+        "print-cli": "^1.6.0",
         "rimraf": "^2.6.1",
         "sinon": "^3.2.1",
         "uglify-es": "^3.1.0",
@@ -105,7 +105,7 @@
     "dependencies": {
         "child_process": "^1.0.2",
         "colors": "^1.1.2",
-        "commander": "^2.11.0",
+        "programmer": "^1.0.0",
         "semver": "^5.4.1"
     }
 }
