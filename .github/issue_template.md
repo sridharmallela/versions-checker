@@ -1,4 +1,4 @@
-### PRINT CLI ISSUE
+### VERSIONS CHECKER ISSUE
 
 * **I'm submitting a ... **
   - [ ] bug report

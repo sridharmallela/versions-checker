@@ -1,108 +1,111 @@
 {
-  "name": "versions-checker",
-  "version": "1.1.0",
-  "description": "check installed versions of node, npm, yarn, and git",
-  "main": "bin/index.js",
-  "author": "Sridhar Mallela",
-  "license": "MIT",
-  "homepage": "https://github.com/sridharmallela/versions-checker#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sridharmallela/versions-checker.git"
-  },
-  "bugs": {
-    "url": "https://github.com/sridharmallela/versions-checker/issues"
-  },
-  "keywords": [
-    "NODE",
-    "NPM",
-    "YARN",
-    "GIT",
-    "VERSION",
-    "CHECKER"
-  ],
-  "directories": {
-    "bin": "bin"
-  },
-  "files": [
-    "bin/versions-checker",
-    "bin/index.js",
-    "README.md"
-  ],
-  "bin": {
-    "versions-checker": "./bin/versions-checker"
-  },
-  "config": {
-    "unsafe-perm": true,
-    "validate-commit-msg": {
-      "types": [
-        "feat",
-        "fix",
-        "docs",
-        "style",
-        "refactor",
-        "test",
-        "chore"
-      ],
-      "warnOnFail": false,
-      "maxSubjectLength": 1500,
-      "helpMessage": "use karma style git commit pattern"
+    "name": "versions-checker",
+    "version": "1.1.1",
+    "description": "check installed versions of node, npm, yarn, and git",
+    "main": "bin/index.js",
+    "author": "Sridhar Mallela",
+    "license": "MIT",
+    "homepage": "https://github.com/sridharmallela/versions-checker#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sridharmallela/versions-checker.git"
+    },
+    "bugs": {
+        "url": "https://github.com/sridharmallela/versions-checker/issues"
+    },
+    "keywords": [
+        "NODE",
+        "NPM",
+        "YARN",
+        "GIT",
+        "VERSION",
+        "CHECKER"
+    ],
+    "directories": {
+        "bin": "bin"
+    },
+    "files": [
+        "bin/versions-checker",
+        "bin/index.js",
+        "README.md"
+    ],
+    "bin": {
+        "versions-checker": "./bin/versions-checker"
+    },
+    "config": {
+        "unsafe-perm": true,
+        "validate-commit-msg": {
+            "types": [
+                "feat",
+                "fix",
+                "docs",
+                "style",
+                "refactor",
+                "test",
+                "chore"
+            ],
+            "warnOnFail": false,
+            "maxSubjectLength": 1500,
+            "helpMessage": "use karma style git commit pattern"
+        }
+    },
+    "nyc": {
+        "extension": [
+            ".js"
+        ],
+        "exclude": [
+            "**/dist/*",
+            "**/bin/*",
+            "**/test/*",
+            "**/assets/*",
+            "**/*.spec.js",
+            "**/coverage/*"
+        ],
+        "reporter": [
+            "lcov",
+            "text"
+        ],
+        "all": true
+    },
+    "scripts": {
+        "print-banner": "./node_modules/.bin/print-cli -b -font standard -c green \"versions-checker\"",
+        "commitmsg": "./node_modules/.bin/validate-commit-msg",
+        "clean": "./node_modules/.bin/rimraf coverage .nyc_output",
+        "lint": "./node_modules/.bin/eslint .",
+        "uglify-src": "./node_modules/.bin/uglifyjs ./lib/index.js -c -m -o ./bin/index.js",
+        "uglify-cli": "./node_modules/.bin/uglifyjs ./lib/cli.js -c -m -o ./bin/versions-checker",
+        "uglify": "npm run uglify-src && npm run uglify-cli",
+        "build": "npm run lint && npm run uglify",
+        "test-unit": "./node_modules/.bin/nyc ./node_modules/.bin/mocha ./lib/*.spec.js",
+        "test": "npm run lint && npm run uglify && npm run clean && npm run test-unit && npm run print-banner",
+        "report-coverage": "./node_modules/.bin/nyc report --reporter=lcov > coverage.lcov",
+        "code-coverage": "./node_modules/.bin/codecov",
+        "coverage": "npm run report-coverage && npm run code-coverage",
+        "precommit": "npm test",
+        "preversion": "npm test",
+        "prepublishOnly": "npm test",
+        "help": "npm test && ./bin/versions-checker --help",
+        "check-all": "./bin/versions-checker --all",
+        "test-node-check": "./bin/versions-checker --node 7"
+    },
+    "devDependencies": {
+        "chai": "^4.1.1",
+        "codecov": "^2.3.0",
+        "eslint": "^4.5.0",
+        "husky": "^0.14.3",
+        "mocha": "^3.5.0",
+        "nyc": "^11.1.0",
+        "path": "^0.12.7",
+        "print-cli": "^1.5.1",
+        "rimraf": "^2.6.1",
+        "sinon": "^3.2.1",
+        "uglify-es": "^3.1.0",
+        "validate-commit-message": "^3.0.1"
+    },
+    "dependencies": {
+        "child_process": "^1.0.2",
+        "colors": "^1.1.2",
+        "commander": "^2.11.0",
+        "semver": "^5.4.1"
     }
-  },
-  "nyc": {
-    "extension": [
-      ".js"
-    ],
-    "exclude": [
-      "**/dist/*",
-      "**/bin/*",
-      "**/test/*",
-      "**/assets/*",
-      "**/coverage/*"
-    ],
-    "reporter": [
-      "lcov",
-      "text"
-    ],
-    "all": true
-  },
-  "scripts": {
-    "print-banner": "./node_modules/.bin/print-cli -b -font standard -c green \"versions-checker\"",
-    "commitmsg": "./node_modules/.bin/validate-commit-msg",
-    "clean": "./node_modules/.bin/rimraf coverage .nyc_output",
-    "lint": "./node_modules/.bin/eslint .",
-    "uglify-src": "./node_modules/.bin/uglifyjs ./lib/index.js -c -m -o ./bin/index.js",
-    "uglify-cli": "./node_modules/.bin/uglifyjs ./lib/cli.js -c -m -o ./bin/versions-checker",
-    "uglify": "npm run uglify-src && npm run uglify-cli",
-    "test-unit": "./node_modules/.bin/nyc mocha test",
-    "build": "npm run lint && npm run uglify",
-    "test": "npm run lint && npm run uglify && npm run clean && npm run test-unit && npm run print-banner",
-    "report-coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
-    "precommit": "npm test",
-    "preversion": "npm test",
-    "prepublishOnly": "npm test",
-    "help": "npm test && ./bin/versions-checker --help",
-    "check-all": "./bin/versions-checker --all",
-    "test-node-check": "./bin/versions-checker --node 7"
-  },
-  "devDependencies": {
-    "chai": "^4.1.1",
-    "codecov": "^2.3.0",
-    "eslint": "^4.5.0",
-    "husky": "^0.14.3",
-    "mocha": "^3.5.0",
-    "nyc": "^11.1.0",
-    "path": "^0.12.7",
-    "print-cli": "^1.5.1",
-    "rimraf": "^2.6.1",
-    "sinon": "^3.2.1",
-    "uglify-js": "^3.0.28",
-    "validate-commit-message": "^3.0.1"
-  },
-  "dependencies": {
-    "child_process": "^1.0.2",
-    "colors": "^1.1.2",
-    "commander": "^2.11.0",
-    "semver": "^5.4.1"
-  }
 }

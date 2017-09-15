@@ -1,4 +1,4 @@
-### PRINT CLI Pull Request
+### VERSIONS CHECKER Pull Request
 
 * **Please check if the PR fulfills these requirements**
 - [ ] Code follows the code style of this project.
