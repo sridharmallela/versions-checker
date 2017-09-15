@@ -148,6 +148,32 @@ $ versions-checker --help
     console.log('npm version is ' + versions.node);
 ```
 
+```ts
+    import { validate, checkAll } from 'versions-checker';
+
+    // returns boolean
+    const isValid = validate({
+        node: '>=6.9.5',
+        npm: '>1',
+        yarn: '0.24 || 0.25',
+        git: '2.14',
+        karma: '<1.7',
+        gulp: '1',
+        grunt: '1.5',
+        eslint: '1.5.6',
+        tslint: '>=1.4',
+        nvm: '=1.5',
+        n: '=1.5.6'
+    });
+
+    const isNodeValid = validate({ node: '6.9.5'});
+
+    const versions = checkAll();
+
+    console.log('node version is ' + versions.node);
+    console.log('npm version is ' + versions.node);
+```
+
 
 <a id="markdown-npm-script" name="npm-script"></a>
 ### NPM Script
@@ -162,13 +188,12 @@ $ versions-checker --help
 ```
 
 ```bash 
-$ npm run check-versions
+    $ npm run check-versions
 
-> versions-checker --node ">= 4.0.0" --npm ">=2.0.0" 
+    > versions-checker --node ">= 4.0.0" --npm ">=2.0.0" 
 
-    node: 6.9.5
-    npm: 5.2.0
-
+        node: 6.9.5
+        npm: 5.2.0
 ```
 
 
@@ -213,18 +238,18 @@ $ npm run check-versions
 * checks which version of node is being used, and compares it with user input version.
 
 ```bash
-$ versions-checker --node ">4.5"
-    node: 6.9.5
-$ versions-checker --node "<4.5"
-    node: 6.9.5 but expected is <4.5
-$ versions-checker --node 4
-    node: 6.9.5 but expected is 4
-$ versions-checker --node 6
-    node: 6.9.5
-$ versions-checker -n 6.9
-    node: 6.9.5
-$ versions-checker -n 6.10
-    node: 6.9.5 but expected is 6.10
+    $ versions-checker --node ">4.5"
+        node: 6.9.5
+    $ versions-checker --node "<4.5"
+        node: 6.9.5 but expected is <4.5
+    $ versions-checker --node 4
+        node: 6.9.5 but expected is 4
+    $ versions-checker --node 6
+        node: 6.9.5
+    $ versions-checker -n 6.9
+        node: 6.9.5
+    $ versions-checker -n 6.10
+        node: 6.9.5 but expected is 6.10
 ```
 
 <a id="markdown-npm--m--npm" name="npm--m--npm"></a>
@@ -233,14 +258,14 @@ $ versions-checker -n 6.10
 * checks which version of npm is being used, and compares it with user input version.
 
 ```bash
-$ versions-checker --npm ">=2.5.0"
-    npm: 5.2.0
-$ versions-checker --npm ">2.5.0"
-    npm: 5.2.0
-$ versions-checker -m ">2.5"
-    npm: 5.2.0
-$ versions-checker -m "<5.3"
-    npm: 5.2.0
+    $ versions-checker --npm ">=2.5.0"
+        npm: 5.2.0
+    $ versions-checker --npm ">2.5.0"
+        npm: 5.2.0
+    $ versions-checker -m ">2.5"
+        npm: 5.2.0
+    $ versions-checker -m "<5.3"
+        npm: 5.2.0
 ```
 
 <a id="markdown-yarn--y--yarn" name="yarn--y--yarn"></a>
@@ -249,10 +274,10 @@ $ versions-checker -m "<5.3"
 * checks which version of yarn is being used, and compares it with user input version.
 
 ```bash
-$ versions-checker --yarn "0.27"
-    yarn: 0.27.5
-$ versions-checker -y "0.27.5"
-    yarn: 0.27.5
+    $ versions-checker --yarn "0.27"
+        yarn: 0.27.5
+    $ versions-checker -y "0.27.5"
+        yarn: 0.27.5
 ```
 
 <a id="markdown-git--g--git" name="git--g--git"></a>
@@ -261,10 +286,10 @@ $ versions-checker -y "0.27.5"
 * checks which version of git is being used, and compares it with user input version.
 
 ```bash
-$ versions-checker -g "2"
-    git: 2.14.1
-$ versions-checker --git "2.14"
-    git: 2.14.1
+    $ versions-checker -g "2"
+        git: 2.14.1
+    $ versions-checker --git "2.14"
+        git: 2.14.1
 ```
 
 <a id="markdown-karma--k--karma" name="karma--k--karma"></a>
@@ -273,10 +298,10 @@ $ versions-checker --git "2.14"
 * checks which version of karma is being used, and compares it with user input version.
 
 ```bash
-$ versions-checker --karma "1"
-    karma: 1.6.0
-$ versions-checker -k "<1.7"
-    karma: 1.6.0
+    $ versions-checker --karma "1"
+        karma: 1.6.0
+    $ versions-checker -k "<1.7"
+        karma: 1.6.0
 ```
 
 <a id="markdown-gulp---gulp" name="gulp---gulp"></a>
@@ -285,8 +310,8 @@ $ versions-checker -k "<1.7"
 * checks which version of gulp is being used, and compares it with user input version.
 
 ```bash
-$ versions-checker --gulp ">=3.5"
-    gulp: 1033083.9.1
+    $ versions-checker --gulp ">=3.5"
+        gulp: 1033083.9.1
 ```
 
 <a id="markdown-grunt---grunt" name="grunt---grunt"></a>
@@ -295,10 +320,10 @@ $ versions-checker --gulp ">=3.5"
 * checks which version of grunt is being used, and compares it with user input version.
 
 ```bash
-$ versions-checker --grunt "2"
-    grunt: 1.2.0 but expected is 2
-$ versions-checker --grunt "1"
-    grunt: 1.2.0
+    $ versions-checker --grunt "2"
+        grunt: 1.2.0 but expected is 2
+    $ versions-checker --grunt "1"
+        grunt: 1.2.0
 ```
 
 <a id="markdown-eslint--e--eslint" name="eslint--e--eslint"></a>
@@ -307,10 +332,10 @@ $ versions-checker --grunt "1"
 * checks which version of eslint is being used, and compares it with user input version.
 
 ```bash
-$ versions-checker --eslint "4.5"
-    eslint: 4.5.0
-$ versions-checker -e "4"
-    eslint: 4.5.0
+    $ versions-checker --eslint "4.5"
+        eslint: 4.5.0
+    $ versions-checker -e "4"
+        eslint: 4.5.0
 ```
 
 <a id="markdown-tslint--t--tslint" name="tslint--t--tslint"></a>
@@ -319,10 +344,10 @@ $ versions-checker -e "4"
 * checks which version of tslint is being used, and compares it with user input version.
 
 ```bash
-$ versions-checker -t "5"
-    tslint: 5.7.0
-$ versions-checker --tslint "5.7"
-    tslint: 5.7.0
+    $ versions-checker -t "5"
+        tslint: 5.7.0
+    $ versions-checker --tslint "5.7"
+        tslint: 5.7.0
 ```
 
 <a id="markdown-nvm---nvm" name="nvm---nvm"></a>
@@ -331,10 +356,10 @@ $ versions-checker --tslint "5.7"
 * checks which version of npm is being used, and compares it with user input version.
 
 ```bash
-$ versions-checker --nvm "5"
-    nvm: 4.21.9 but expected is 5
-$ versions-checker --n-mac "4"
-    nvm: 4.21.9
+    $ versions-checker --nvm "5"
+        nvm: 4.21.9 but expected is 5
+    $ versions-checker --n-mac "4"
+        nvm: 4.21.9
 ```
 
 <a id="markdown-n---n-mac" name="n---n-mac"></a>
@@ -343,10 +368,10 @@ $ versions-checker --n-mac "4"
 * checks which version of npm is being used, and compares it with user input version.
 
 ```bash
-$ versions-checker --n-mac "3"
-    n: 2.1.7 but expected is 3
-$ versions-checker --n-mac "2"
-    n: 2.1.7
+    $ versions-checker --n-mac "3"
+        n: 2.1.7 but expected is 3
+    $ versions-checker --n-mac "2"
+        n: 2.1.7
 ```
 
 
@@ -364,4 +389,20 @@ Global package:
 <a id="markdown-license" name="license"></a>
 ## License
 
-MIT
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
