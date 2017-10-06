@@ -17,7 +17,6 @@
 [![codecov](https://codecov.io/gh/sridharmallela/versions-checker/branch/master/graph/badge.svg)](https://codecov.io/gh/sridharmallela/versions-checker)
 [![Quality Gate](https://sonarcloud.io/api/badges/gate?key=com.sridharmallela.projects.versions-checker:master)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
 [![Lines of Code](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=ncloc)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
-[![Lines of Code](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=ncloc)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
 
 [![Bugs](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=bugs)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
 [![Code Smells](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=code_smells)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)

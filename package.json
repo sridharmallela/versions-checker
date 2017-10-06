@@ -76,10 +76,10 @@
         "all": true
     },
     "scripts": {
-        "print-banner": "./node_modules/.bin/print-cli -b -font standard -c green \"versions-checker\"",
+        "print-banner": "./node_modules/.bin/print-cli -b -c green \"versions-checker\"",
         "commitmsg": "./node_modules/.bin/validate-commit-msg",
         "clean": "./node_modules/.bin/rimraf ./coverage ./.nyc_output ./bin/index.js ./bin/versions-checker",
-        "lint": "./node_modules/.bin/eslint lib/.",
+        "lint": "./node_modules/.bin/eslint ./lib/.",
         "uglify-src": "./node_modules/.bin/uglifyjs ./lib/index.js -c -m -o ./bin/index.js",
         "uglify-cli": "./node_modules/.bin/uglifyjs ./lib/cli.js -c -m -o ./bin/versions-checker",
         "permissions": "./node_modules/.bin/chmod 755 ./bin/*",
@@ -114,7 +114,7 @@
     "dependencies": {
         "child_process": "^1.0.2",
         "colors": "^1.1.2",
-        "programmer": "^1.0.1",
+        "programmer": "^1.0.2",
         "semver": "^5.4.1"
     }
 }
