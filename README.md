@@ -7,7 +7,6 @@
 [![npm](https://img.shields.io/npm/dy/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
 [![npm](https://img.shields.io/npm/dt/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
 
-
 [![GitHub tag](https://img.shields.io/github/tag/sridharmallela/versions-checker.svg?style=plastic)](https://github.com/sridharmallela/versions-checker/tags)
 [![GitHub release](https://img.shields.io/github/release/sridharmallela/versions-checker.svg?style=plastic)](https://github.com/sridharmallela/versions-checker/releases)
 [![GitHub issues](https://img.shields.io/github/issues/sridharmallela/versions-checker.svg?style=plastic)](https://github.com/sridharmallela/versions-checker/issues) 
@@ -16,11 +15,24 @@
 
 [![Build Status](https://img.shields.io/travis/sridharmallela/versions-checker.svg?style=plastic)](https://travis-ci.org/sridharmallela/versions-checker) 
 [![codecov](https://codecov.io/gh/sridharmallela/versions-checker/branch/master/graph/badge.svg)](https://codecov.io/gh/sridharmallela/versions-checker)
+[![Quality Gate](https://sonarcloud.io/api/badges/gate?key=com.sridharmallela.projects.versions-checker:master)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
+[![Lines of Code](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=ncloc)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
+[![Lines of Code](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=ncloc)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
+
+[![Bugs](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=bugs)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
+[![Code Smells](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=code_smells)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
+[![Critical Violations](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=critical_violations)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
+[![Blocker Violations](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=blocker_violations)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
+[![Technical Debt Ratio](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=sqale_debt_ratio)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
+
+[![Security Ratings](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=new_security_rating)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
+[![Reliability Ratings](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=new_reliability_rating)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
+[![Maintainability Ratings](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=new_maintainability_rating)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
 
 [![node](https://img.shields.io/node/v/sridharmallela/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
-[![David](https://img.shields.io/david/sridharmallela/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
-[![David](https://img.shields.io/david/dev/sridharmallela/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
-[![David](https://img.shields.io/david/optional/sridharmallela/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
+[![Dependencies](https://img.shields.io/david/sridharmallela/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
+[![Dev Dependencies](https://img.shields.io/david/dev/sridharmallela/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
+[![Optional Dependencies](https://img.shields.io/david/optional/sridharmallela/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
 
 [![GitHub forks](https://img.shields.io/github/forks/sridharmallela/versions-checker.svg?style=social&label=Fork)](https://github.com/sridharmallela/versions-checker/)
 [![GitHub stars](https://img.shields.io/github/stars/sridharmallela/versions-checker.svg?style=social&label=Star)](https://github.com/sridharmallela/versions-checker/)
