@@ -15,7 +15,7 @@ addons:
     sonarcloud:
         organization: "sridharmallela-github"
         token:
-            secure: "l5nvpjI/feBpFPMYBeIp4JbNGCHYcmD0U5xU17jA0rn82QWdtfYUC1RKSpoUkoxWt5bgmZjCMtcDlZSrWluAiIu09czN2IHzfPFtNldDVcKqeOV8n3TY2Uba+TTRTGy3xV4Yb9cEYYcKEEZMEGrZFhjllnB7mdtuIkPDT+RKq3NukNLxxHWxtXhTDSaZRLutTHURFsYn/FIQqXS/kpZyaxa92WHa1tIanHaLdDwqvGqrz9tklzqVvRJH3gsyspTeVyCOC1PBue3mNWsisXdZencEZN/opG51IyuVBIfRBLGZSDHh+T6fUhILTBaQiGaCAEYsLj+X4iU1koJo4FOQeYSLxYHYdV6ysZbCdaTGa3wFRgOOqRsX2u6rrCcYNHgstRK8Pg2gldYqqxfX5SS+80mOxnoekhSTSd1coGpEv6jEA2uOHNmoTmJVAr1tO8AdDnauIGNEw268TSELHtd5yULA8nwnhcQ38yBjbnzKq1YthViunGNwhFKrsCgpNpNl2vpJc0ngp63fkmPNErQKr1V5MTvP7F8H8bs3PTbgVsvQVmXN76lm8nIaDXbgn2YSuqjLktQNnmt/Ayotg1pb4uWRglzmMRjbtgDZvLuTJjVCCoXtHdj/jBYAoJEgjRIvVUHBoV2v5Zpu12RcCDeD3yxztmyPknV4sxEzdwkU1ZQ="
+            secure: "mvH/PNRZknupTiTKJy6TwETi4inB8R4NGbBukDjfQLIx79PrYkosHsr9un6vNh+4FDqev+tDBPZvJSicsEC3M5Q9whPHupC5/8unKsr8WWDgvvwVOyVwYxpI5kdqMezJGEo0NZd1t7oX+uzjQftTb1qDGolwe4z3yPsrCYVuxRSnSr83twqAMTnfIOyfLPdvHz9GCjYHUuntxRPWJ1IMNhLD5psbMTOyHz+EVkPkQ0pArXiDyU8Z/ncfa38ULv0Iuqlkv0huH/cZptfB9i7oamH3rywI3KTnaD6yJHKXhjLgXjz1cIfeLokOZ1t4WKOmfLKcpmdH0t0ptW3GXZnEePBK4x+GGoIKQBuU3A84UhnL9Hhkv1KGne3qUQnvyLBlKlzjWv9mZWffKXA4JfJ+5LACFOBnPa2maU5Rp92aD8YxzfM/am5rZqnWccBbxX8VGDwr9bg4G6kkN1a8a1diXRgdaYFu+fnblqgxqgWhoiKsFjRg+YaDCF2qu3vbXWhXZk/yWCi9HtEpO/wsBg8qBlM61+fhSd6/5CGttM7peeklxmz2LwRXjRjmQw+DFnTQZsCocOiZujUiLYoBOmjhHSt5JewcamzbIYKFEPPRUGR/cR0LSnWb32yphq27DarMXI53S/n1iTgMnPwECJhCI5sDKkG6VMF6LgT/r7r8qKw="
         branches:
             - master
 
@@ -37,7 +37,6 @@ install:
 
 script:
     - npm run check-all
-    - npm run help
     - npm run coverage
     - sonar-scanner
 

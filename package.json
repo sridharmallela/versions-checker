@@ -94,7 +94,7 @@
         "preversion": "npm test",
         "prepublishOnly": "npm test",
         "help": "npm test && ./bin/versions-checker --help",
-        "check-all": "./bin/versions-checker --all",
+        "check-all": "npm run help && ./bin/versions-checker --all",
         "test-node-check": "./bin/versions-checker --node 7"
     },
     "devDependencies": {
