@@ -29,7 +29,6 @@ _config.yml
 .eslintignore
 .eslintrc
 .gitignore
-.npmrc
 .vcmrc
 .travis.yml
 CHANGELOG.md
@@ -38,4 +37,6 @@ README.md
 assets
 coverage
 .github
-bin/.gitkeep
+.history
+sonar-project.properties
+
