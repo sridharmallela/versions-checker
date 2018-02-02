@@ -60,3 +60,5 @@ typings/
 node_modules
 .history/
 bin/
+.DS_Store
+.vscode
