@@ -1,5 +1,5 @@
 <a id="markdown-versions-checker" name="versions-checker"></a>
-# Versions Checker 
+# Versions Checker
 
 [![npm](https://img.shields.io/npm/v/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
 [![npm](https://img.shields.io/npm/dw/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
@@ -9,11 +9,12 @@
 
 [![GitHub tag](https://img.shields.io/github/tag/sridharmallela/versions-checker.svg?style=plastic)](https://github.com/sridharmallela/versions-checker/tags)
 [![GitHub release](https://img.shields.io/github/release/sridharmallela/versions-checker.svg?style=plastic)](https://github.com/sridharmallela/versions-checker/releases)
-[![GitHub issues](https://img.shields.io/github/issues/sridharmallela/versions-checker.svg?style=plastic)](https://github.com/sridharmallela/versions-checker/issues) 
+[![GitHub issues](https://img.shields.io/github/issues/sridharmallela/versions-checker.svg?style=plastic)](https://github.com/sridharmallela/versions-checker/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/sridharmallela/versions-checker.svg?style=plastic)](https://github.com/sridharmallela/versions-checker/pulls)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)](https://raw.githubusercontent.com/sridharmallela/versions-checker/master/LICENSE)
 
-[![Build Status](https://img.shields.io/travis/sridharmallela/versions-checker.svg?style=plastic)](https://travis-ci.org/sridharmallela/versions-checker) 
+[![Build Status](https://img.shields.io/travis/sridharmallela/versions-checker.svg?style=plastic)](https://travis-ci.org/sridharmallela/versions-checker)
+[![Build status](https://ci.appveyor.com/api/projects/status/yl53yihcyefaxptt?svg=true)](https://ci.appveyor.com/project/sridharmallela/versions-checker)
 [![codecov](https://codecov.io/gh/sridharmallela/versions-checker/branch/master/graph/badge.svg)](https://codecov.io/gh/sridharmallela/versions-checker)
 [![Quality Gate](https://sonarcloud.io/api/badges/gate?key=com.sridharmallela.projects.versions-checker:master)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
 [![Lines of Code](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=ncloc)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
@@ -39,7 +40,7 @@
 
 ![introduction](https://github.com/sridharmallela/versions-checker/blob/master/assets/intro.gif?raw=true)
 
-Check installed versions of node, npm, yarn, and git 
+Check installed versions of node, npm, yarn, and git
 
 
 <a id="markdown-table-of-contents" name="table-of-contents"></a>
@@ -100,7 +101,7 @@ Check installed versions of node, npm, yarn, and git
 <a id="markdown-usage" name="usage"></a>
 ## Usage
 
-```bash 
+```bash
 $ versions-checker --help
 
   Usage: versions-checker [options]
@@ -198,10 +199,10 @@ $ versions-checker --help
 }
 ```
 
-```bash 
+```bash
     $ npm run check-versions
 
-    > versions-checker --node ">= 4.0.0" --npm ">=2.0.0" 
+    > versions-checker --node ">= 4.0.0" --npm ">=2.0.0"
 
         node: 6.9.5
         npm: 5.2.0
@@ -224,7 +225,7 @@ $ versions-checker --help
 ### Options
 
 <a id="markdown-help--h--help" name="help--h--help"></a>
-#### help (-h|--help) 
+#### help (-h|--help)
 
 * specifies how to use versions-checker
 
