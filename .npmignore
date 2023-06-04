@@ -39,4 +39,4 @@ coverage
 .github
 .history
 sonar-project.properties
-
+.vscode
