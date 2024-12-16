@@ -14,31 +14,6 @@
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/sridharmallela/versions-checker.svg?style=plastic)](https://github.com/sridharmallela/versions-checker/pulls)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)](https://raw.githubusercontent.com/sridharmallela/versions-checker/master/LICENSE)
 
-[![Build Status](https://img.shields.io/travis/sridharmallela/versions-checker.svg?style=plastic)](https://travis-ci.org/sridharmallela/versions-checker)
-[![Build status](https://ci.appveyor.com/api/projects/status/yl53yihcyefaxptt?svg=true)](https://ci.appveyor.com/project/sridharmallela/versions-checker)
-[![codecov](https://codecov.io/gh/sridharmallela/versions-checker/branch/master/graph/badge.svg)](https://codecov.io/gh/sridharmallela/versions-checker)
-[![Quality Gate](https://sonarcloud.io/api/badges/gate?key=com.sridharmallela.projects.versions-checker:master)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
-[![Lines of Code](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=ncloc)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
-
-[![Bugs](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=bugs)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
-[![Code Smells](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=code_smells)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
-[![Critical Violations](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=critical_violations)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
-[![Blocker Violations](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=blocker_violations)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
-[![Technical Debt Ratio](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=sqale_debt_ratio)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
-
-[![Security Ratings](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=new_security_rating)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
-[![Reliability Ratings](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=new_reliability_rating)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
-[![Maintainability Ratings](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=new_maintainability_rating)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
-
-[![node](https://img.shields.io/node/v/sridharmallela/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
-[![Dependencies](https://img.shields.io/david/sridharmallela/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
-[![Dev Dependencies](https://img.shields.io/david/dev/sridharmallela/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
-[![Optional Dependencies](https://img.shields.io/david/optional/sridharmallela/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
-
-[![GitHub forks](https://img.shields.io/github/forks/sridharmallela/versions-checker.svg?style=social&label=Fork)](https://github.com/sridharmallela/versions-checker/)
-[![GitHub stars](https://img.shields.io/github/stars/sridharmallela/versions-checker.svg?style=social&label=Star)](https://github.com/sridharmallela/versions-checker/)
-[![GitHub watchers](https://img.shields.io/github/watchers/sridharmallela/versions-checker.svg?style=social&label=Watch)](https://github.com/sridharmallela/versions-checker/)
-
 ![introduction](https://github.com/sridharmallela/versions-checker/blob/master/assets/intro.gif?raw=true)
 
 Check installed versions of node, npm, yarn, and git
