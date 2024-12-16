@@ -14,31 +14,6 @@
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/sridharmallela/versions-checker.svg?style=plastic)](https://github.com/sridharmallela/versions-checker/pulls)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)](https://raw.githubusercontent.com/sridharmallela/versions-checker/master/LICENSE)
 
-[![Build Status](https://img.shields.io/travis/sridharmallela/versions-checker.svg?style=plastic)](https://travis-ci.org/sridharmallela/versions-checker)
-[![Build status](https://ci.appveyor.com/api/projects/status/yl53yihcyefaxptt?svg=true)](https://ci.appveyor.com/project/sridharmallela/versions-checker)
-[![codecov](https://codecov.io/gh/sridharmallela/versions-checker/branch/master/graph/badge.svg)](https://codecov.io/gh/sridharmallela/versions-checker)
-[![Quality Gate](https://sonarcloud.io/api/badges/gate?key=com.sridharmallela.projects.versions-checker:master)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
-[![Lines of Code](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=ncloc)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
-
-[![Bugs](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=bugs)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
-[![Code Smells](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=code_smells)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
-[![Critical Violations](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=critical_violations)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
-[![Blocker Violations](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=blocker_violations)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
-[![Technical Debt Ratio](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=sqale_debt_ratio)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
-
-[![Security Ratings](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=new_security_rating)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
-[![Reliability Ratings](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=new_reliability_rating)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
-[![Maintainability Ratings](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.versions-checker:master&metric=new_maintainability_rating)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.versions-checker:master)
-
-[![node](https://img.shields.io/node/v/sridharmallela/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
-[![Dependencies](https://img.shields.io/david/sridharmallela/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
-[![Dev Dependencies](https://img.shields.io/david/dev/sridharmallela/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
-[![Optional Dependencies](https://img.shields.io/david/optional/sridharmallela/versions-checker.svg?style=plastic)](https://www.npmjs.com/package/versions-checker)
-
-[![GitHub forks](https://img.shields.io/github/forks/sridharmallela/versions-checker.svg?style=social&label=Fork)](https://github.com/sridharmallela/versions-checker/)
-[![GitHub stars](https://img.shields.io/github/stars/sridharmallela/versions-checker.svg?style=social&label=Star)](https://github.com/sridharmallela/versions-checker/)
-[![GitHub watchers](https://img.shields.io/github/watchers/sridharmallela/versions-checker.svg?style=social&label=Watch)](https://github.com/sridharmallela/versions-checker/)
-
 ![introduction](https://github.com/sridharmallela/versions-checker/blob/master/assets/intro.gif?raw=true)
 
 Check installed versions of node, npm, yarn, and git
@@ -68,13 +43,7 @@ Check installed versions of node, npm, yarn, and git
       - [npm (-m|--npm)](#npm--m--npm)
       - [yarn (-y|--yarn)](#yarn--y--yarn)
       - [Git (-g|--git)](#git--g--git)
-      - [Karma (-k|--karma)](#karma--k--karma)
-      - [gulp (--gulp)](#gulp---gulp)
-      - [grunt (--grunt)](#grunt---grunt)
       - [eslint (-e|--eslint)](#eslint--e--eslint)
-      - [tslint (-t|--tslint)](#tslint--t--tslint)
-      - [nvm (--nvm)](#nvm---nvm)
-      - [n (--n-mac)](#n---n-mac)
   - [Updating versions-checker](#updating-versions-checker)
   - [License](#license)
 
@@ -118,13 +87,7 @@ $ versions-checker --help
     -m  --npm [version]     check npm version
     -y  --yarn [version]    check yarn version
     -g  --git [version]     check git version
-    -k  --karma [version]   check karma version
-        --gulp [version]    check gulp version
-        --grunt [version]   check grunt version
     -e  --eslint [version]  check eslint version
-    -t  --tslint [version]  check tslint version
-        --nvm [version]     check nvm version
-        --n-mac [version]   check n version
     -h, --help              output usage information
 
   Examples:
@@ -146,13 +109,7 @@ const isValid = checker.validate({
   npm: ">1",
   yarn: "0.24 || 0.25",
   git: "2.14",
-  karma: "<1.7",
-  gulp: "1",
-  grunt: "1.5",
-  eslint: "1.5.6",
-  tslint: ">=1.4",
-  nvm: "=1.5",
-  n: "=1.5.6"
+  eslint: "1.5.6"
 });
 
 const isNodeValid = checker.validate({ node: "6.9.5" });
@@ -172,13 +129,7 @@ const isValid = validate({
   npm: ">1",
   yarn: "0.24 || 0.25",
   git: "2.14",
-  karma: "<1.7",
-  gulp: "1",
-  grunt: "1.5",
-  eslint: "1.5.6",
-  tslint: ">=1.4",
-  nvm: "=1.5",
-  n: "=1.5.6"
+  eslint: "1.5.6"
 });
 
 const isNodeValid = validate({ node: "6.9.5" });
@@ -315,43 +266,6 @@ console.log("npm version is " + versions.node);
         git: 2.14.1
 ```
 
-<a id="markdown-karma--k--karma" name="karma--k--karma"></a>
-
-#### Karma (-k|--karma)
-
-- checks which version of karma is being used, and compares it with user input version.
-
-```bash
-    $ versions-checker --karma "1"
-        karma: 1.6.0
-    $ versions-checker -k "<1.7"
-        karma: 1.6.0
-```
-
-<a id="markdown-gulp---gulp" name="gulp---gulp"></a>
-
-#### gulp (--gulp)
-
-- checks which version of gulp is being used, and compares it with user input version.
-
-```bash
-    $ versions-checker --gulp ">=3.5"
-        gulp: 1033083.9.1
-```
-
-<a id="markdown-grunt---grunt" name="grunt---grunt"></a>
-
-#### grunt (--grunt)
-
-- checks which version of grunt is being used, and compares it with user input version.
-
-```bash
-    $ versions-checker --grunt "2"
-        grunt: 1.2.0 but expected is 2
-    $ versions-checker --grunt "1"
-        grunt: 1.2.0
-```
-
 <a id="markdown-eslint--e--eslint" name="eslint--e--eslint"></a>
 
 #### eslint (-e|--eslint)
@@ -363,45 +277,6 @@ console.log("npm version is " + versions.node);
         eslint: 4.5.0
     $ versions-checker -e "4"
         eslint: 4.5.0
-```
-
-<a id="markdown-tslint--t--tslint" name="tslint--t--tslint"></a>
-
-#### tslint (-t|--tslint)
-
-- checks which version of tslint is being used, and compares it with user input version.
-
-```bash
-    $ versions-checker -t "5"
-        tslint: 5.7.0
-    $ versions-checker --tslint "5.7"
-        tslint: 5.7.0
-```
-
-<a id="markdown-nvm---nvm" name="nvm---nvm"></a>
-
-#### nvm (--nvm)
-
-- checks which version of npm is being used, and compares it with user input version.
-
-```bash
-    $ versions-checker --nvm "5"
-        nvm: 4.21.9 but expected is 5
-    $ versions-checker --n-mac "4"
-        nvm: 4.21.9
-```
-
-<a id="markdown-n---n-mac" name="n---n-mac"></a>
-
-#### n (--n-mac)
-
-- checks which version of npm is being used, and compares it with user input version.
-
-```bash
-    $ versions-checker --n-mac "3"
-        n: 2.1.7 but expected is 3
-    $ versions-checker --n-mac "2"
-        n: 2.1.7
 ```
 
 <a id="markdown-updating-versions-checker" name="updating-versions-checker"></a>
