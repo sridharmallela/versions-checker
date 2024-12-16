@@ -1,11 +1,11 @@
 {
   "name": "versions-checker",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "check installed versions of node, npm, yarn, and git",
   "main": "bin/index.js",
   "author": "Sridhar Mallela",
   "license": "MIT",
-  "homepage": "https://github.com/sridharmallela/versions-checker#readme",
+  "homepage": "https://sridharmallela.github.io/versions-checker/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sridharmallela/versions-checker.git"
@@ -63,43 +63,34 @@
   },
   "scripts": {
     "build": "npm run lint && npm run clean && npm run uglify",
-    "check-all": "npm run help && ./bin/versions-checker --all",
-    "clean": "rimraf ./coverage ./.nyc_output ./bin",
-    "code-coverage": "codecov",
-    "coverage": "npm run report-coverage && npm run code-coverage",
-    "help": "npm test && ./bin/versions-checker --help",
-    "lint": "eslint ./lib/.",
-    "make-bin": "mkdirp ./bin -m755",
-    "permissions": "chmod-cli -m 755 ./bin/versions-checker",
-    "precommit": "npm test",
-    "prepublishOnly": "npm test",
-    "preversion": "npm test",
+    "check-all": "npm run help && \"./bin/versions-checker\" --all",
+    "clean": "rimraf \"./coverage\" \"./bin\"",
+    "lint": "eslint \"./lib/.\"",
+    "make-bin": "mkdirp \"./bin\" -m777",
+    "permissions": "chmod-cli -m 777 \"./bin/versions-checker\"",
     "print-banner": "print-cli -b -c green \"versions-checker\"",
-    "report-coverage": "nyc report --reporter=lcov > coverage.lcov",
-    "test": "npm run build && npm run test-unit && npm run print-banner",
-    "test-node-check": "./bin/versions-checker --node 7",
-    "test-unit": "nyc mocha --timeout 5000 ./lib/*.spec.js",
+    "test": "npm run lint && npm run test-unit && npm run print-banner",
+    "test-unit": "jest --config \"./jest.config.js\" --detectOpenHandles",
     "uglify": "npm run make-bin && npm run uglify-src && npm run uglify-cli && npm run permissions",
-    "uglify-cli": "uglifyjs ./lib/cli.js -c -m -o ./bin/versions-checker",
-    "uglify-src": "uglifyjs ./lib/index.js -c -m -o ./bin/index.js"
+    "uglify-cli": "uglifyjs \"./lib/cli.js\" -c -m -o \"./bin/versions-checker\"",
+    "uglify-src": "uglifyjs \"./lib/index.js\" -c -m -o \"./bin/index.js\"",
+    "prepare": "husky"
   },
   "devDependencies": {
-    "chai": "~4.3.7",
-    "chmod-cli": "~1.0.4",
-    "codecov": "~3.8.3",
-    "eslint": "~8.42.0",
-    "husky": "~8.0.3",
+    "chmod-cli": "~2.0.1",
+    "eslint": "~8.57.1",
+    "husky": "~9.1.7",
+    "jest": "~29.7.0",
+    "jest-environment-node": "~29.7.0",
+    "jest-junit": "~16.0.0",
     "mkdirp": "~3.0.1",
-    "mocha": "~10.2.0",
-    "nyc": "~15.1.0",
-    "prettier": "~2.8.8",
-    "rimraf": "~5.0.1",
-    "print-cli": "~2.0.0",
-    "sinon": "~15.1.0",
-    "uglify-es": "~3.3.9"
+    "prettier": "~3.4.2",
+    "print-cli": "~2.1.0",
+    "rimraf": "~6.0.1",
+    "uglify-es": "~3.3.10"
   },
   "dependencies": {
-    "programmer": "~2.0.0",
-    "semver": "~7.5.1"
+    "programmer": "~3.0.1",
+    "semver": "~7.6.3"
   }
 }
