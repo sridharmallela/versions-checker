@@ -12,9 +12,9 @@
 [![GitHub release](https://img.shields.io/github/release/sridharmallela/versions-checker.svg?style=plastic)](https://github.com/sridharmallela/versions-checker/releases)
 [![GitHub issues](https://img.shields.io/github/issues/sridharmallela/versions-checker.svg?style=plastic)](https://github.com/sridharmallela/versions-checker/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/sridharmallela/versions-checker.svg?style=plastic)](https://github.com/sridharmallela/versions-checker/pulls)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)](https://raw.githubusercontent.com/sridharmallela/versions-checker/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)](https://raw.githubusercontent.com/sridharmallela/versions-checker/main/LICENSE)
 
-![introduction](https://github.com/sridharmallela/versions-checker/blob/master/assets/intro.gif?raw=true)
+![introduction](https://github.com/sridharmallela/versions-checker/blob/main/assets/intro.gif?raw=true)
 
 Check installed versions of node, npm, yarn, and git
 
